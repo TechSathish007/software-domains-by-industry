@@ -6,7 +6,9 @@
 ![Single file](https://img.shields.io/badge/build-none%20%7C%20single%20HTML-brightgreen)
 ![Dependencies](https://img.shields.io/badge/dependencies-0-success)
 ![Made for](https://img.shields.io/badge/focus-India-orange)
+![License](https://img.shields.io/badge/license-MIT-green)
 ![PRs](https://img.shields.io/badge/PRs-welcome-blueviolet)
+[![Live demo](https://img.shields.io/badge/demo-live-222?logo=github)](https://techsathish007.github.io/software-domains-by-industry/)
 
 **Software Domains by Industry** is a self-contained, offline-friendly HTML field guide. It maps the software that exists across 72 industries — from banking and semiconductors to funeral care and space — and, for each one, explains the definition, the hard engineering problems, a typical technology stack, and how that industry's software actually looks in the Indian market.
 
@@ -17,7 +19,7 @@ Open any card to read a single domain in depth. There is no build step, no frame
 ## Viewing it
 
 - **Locally:** open `Software_Domains_by_Industry.html` in any modern browser. Everything (content, styling, images) is embedded in the file, so it works fully offline.
-- **Online:** you can serve it as a live webpage with GitHub Pages — go to **Settings → Pages → Deploy from a branch → `main` / root**. The site then appears at `https://TechSathish007.github.io/software-domains-by-industry/Software_Domains_by_Industry.html`.
+- **Online:** it is served as a live webpage through GitHub Pages at **https://techsathish007.github.io/software-domains-by-industry/** — the root `index.html` forwards to the guide. Pages deploys from the `main` branch, root folder.
 
 ## Features
 
@@ -138,6 +140,25 @@ Every entry in `DATA` has the same shape, so adding a domain means adding one ob
 | `stack` | string[] | A representative technology stack |
 | `one` | string | The single thing worth remembering |
 
+## Repository structure
+
+The repository is deliberately small: one content file plus the usual project furniture.
+
+```
+Software_Domains_by_Industry.html   # the entire guide — content, CSS, JS and images
+index.html                          # redirect so GitHub Pages serves a clean root URL
+README.md                           # this file
+CONTRIBUTING.md                     # how to propose changes
+CODE_OF_CONDUCT.md                  # expected behaviour
+LICENSE                             # MIT
+.gitignore                          # OS / editor artifacts
+.github/
+  PULL_REQUEST_TEMPLATE.md
+  ISSUE_TEMPLATE/
+    content_correction.md           # report a wrong fact or stale example
+    bug_report.md                   # report a layout / search / theme problem
+```
+
 ## Sources, methodology & image credits
 
 India examples are drawn from public sources — government portals and regulators (RBI, NPCI, SEBI, IRDAI, TRAI, FSSAI, BIS, CPCB, MoD) and industry bodies — and are **illustrative, not exhaustive**. Content was last reviewed on 12 October 2026. Verify specifics against the named authority before relying on them.
@@ -146,13 +167,17 @@ Cover photos on the most recently added domains are openly licensed images from 
 
 ## License
 
-No project-wide licence has been declared yet, so default copyright applies to the text and code. The third-party cover images retain their own licences (Creative Commons / public domain) as credited in the page. If you intend to reuse or redistribute this guide, add a `LICENSE` file first — for a reference work like this, **CC BY 4.0** (content) or **MIT** (code) are common choices.
+Released under the **MIT License** — see [LICENSE](LICENSE). You are free to use, modify and redistribute this guide, including commercially, provided the copyright notice is retained.
+
+The third-party cover images are **not** covered by the MIT licence: they remain under their own Creative Commons or public-domain terms, as credited inside the page under **Sources & methodology**.
 
 ## Contributing
 
-Corrections, additions and better India-specific examples are welcome.
+Corrections, additions and sharper India-specific examples are welcome. Please read [CONTRIBUTING.md](CONTRIBUTING.md) for the entry format, house style and image rules, and note the project's [Code of Conduct](CODE_OF_CONDUCT.md).
 
-1. Fork the repository and edit `Software_Domains_by_Industry.html` (the `DATA` array) or open an issue describing the change.
+In short:
+
+1. Fork the repository and edit `Software_Domains_by_Industry.html` (the `DATA` array), or open an issue for a correction or a bug.
 2. Keep entries to the existing shape and tone: concrete, honest about what's hard, and India-specific where it matters.
 3. If you add a cover image, use an openly licensed one and include its attribution.
 4. Open a pull request with a short description of what changed and why.

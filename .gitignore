@@ -1,0 +1,32 @@
+# --- Operating system junk ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# --- Editor / IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# --- Logs & temp ---
+*.log
+*.tmp
+*.bak
+
+# --- Local tooling (not used by this project, but kept tidy) ---
+node_modules/
+.env
+.env.*
+venv/
+.venv/
+__pycache__/
